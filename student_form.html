@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <div class="sidebar">
+        <h2>Menú</h2>
+            <nav>
+                <a id="menuNav" href="menu.html">Página Principal</a>
+                <a id="alumnoNav" href="alumno.html"class="active">Alumnos</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <header id="headerAlumno">
+                <h1 id="encabezado">Agregar Alumnos</h1>
+                <a href="Student.html" class="buttonStAct">Atras</a>
+            </header>
+
+            <div class="sendForm">
+                <form onsubmit="addStudents(event)">
+                  <div class="form-group">
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" id="name" name="name" required placeholder="Nombre">
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Apellido:</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Apellido">
+                  </div>
+              
+                  <button  id="submitButton" type="submit">Guardar</button>
+                </form>
+              </div>
+              
+            
+        </div>
+    </div>
+</body>
+</html>

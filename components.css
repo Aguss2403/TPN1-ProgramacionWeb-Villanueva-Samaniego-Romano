@@ -1,0 +1,100 @@
+#headerAlumno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#add {
+  background-color: red;
+}
+
+.buttonSt {
+  background-color: #4caf50;/* Color de fondo verde */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonStAct{
+    background-color: red;/* Color de fondo verde */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 15px;
+    border: 1px solid;
+    padding-left: 100px;
+    border-radius: 15px;
+    background-color: white;
+  }
+  
+  th,td,tr {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 400px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 10cap;
+    margin: auto;
+  }
+
+  .content-layout{
+    width: 96%;
+    align-self: center;
+  }
+  #searchInput{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    height: 25px;
+    width: 99.5%;
+  }
+  .pagination{
+    margin-left: 92%;
+  }
+
+/* Flex container to align labels and inputs */
+.form-group {
+display: flex;
+align-items: center;
+margin-bottom: 10px; /* Space between form fields */
+}
+
+/* Style for the labels */
+.form-label {
+width: 100px; /* Set a fixed width for labels */
+margin-right: 10px; /* Space between label and input */
+text-align: right; /* Align the text to the right */
+}
+
+/* Style for the input fields */
+.form-group input {
+flex: 1; /* Input will take the remaining space */
+}
+
+#submitButton{
+    margin-left: 2.5%;
+    width: max-content;
+    height: 30px;
+    background-color: darkturquoise;
+    border-radius: 7px;
+    border-color: green;
+    color: white;
+}

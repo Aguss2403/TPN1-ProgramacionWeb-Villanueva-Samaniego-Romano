@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="sidebar-layout">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <nav>
+                <a id="menuNav" href="menu.html">Página Principal</a>
+                <a id="alumnoNav" href="student.html"class="active">Alumnos</a>
+            </nav>
+        </div>
+
+        <div class="container">
+            <header id="headerAlumno">
+                <h1 id="encabezado">Alumnos</h1>
+                <a href="student_form.html" class="buttonSt">Agregar</a>
+            </header>
+    
+            <div id="contentLayout" class="content-layout">
+                <div class="searchTable">
+                    <input type="text" id="searchInput" placeholder="Buscar..."
+                        onkeyup="searchTable()">
+                </div>
+    
+                <table id="datos">
+                    <thead>
+                        <tr>
+                            <th>Legajo</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodytable"></tbody>
+                </table>
+    
+                <div class="pagination">
+                    <span>Página número:</span> <!-- Texto adicional -->
+                    <select id="pageSelect" onchange="changePageSelect()"></select>
+                    <!-- <span id="pageNumber"></span> -->
+                  </div>
+            </div>
+
+            
+        </div>
+            
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Layout con Navegación Lateral</title>
+    
+</head>
+<body>
+    <div class="sidebar-layout">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <nav>
+                <a id="menuNav" href="menu.html" class="active">Página Principal</a>
+                <a id="alumnoNav" href="student.html">Alumnos</a>
+            </nav>
+        </div>
+        <div class="container">
+            <header>
+                <h1 id="encabezado">Página Principal</h1>
+            </header>
+            <main>
+                <div class="card" >
+                    <a id="alumnoButton" href="student.html"><h1>Módulo Alumno</h1></a>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

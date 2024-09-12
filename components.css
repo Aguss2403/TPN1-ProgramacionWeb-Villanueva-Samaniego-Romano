@@ -38,6 +38,7 @@ header{
   cursor: pointer;
   border-radius: 5px;
   border-color: black;
+  width: 53px;
 }
 
 table {

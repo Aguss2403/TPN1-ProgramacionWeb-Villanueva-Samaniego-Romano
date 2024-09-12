@@ -1,7 +1,11 @@
-#headerAlumno {
+#headerStudent {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header{
+  margin-bottom: 15px;
 }
 
 #add {
@@ -9,7 +13,7 @@
 }
 
 .buttonSt {
-  background-color: #4caf50;/* Color de fondo verde */
+  background-color: green;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -18,10 +22,12 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
+  border-color: black;
 }
 
 .buttonStAct{
-    background-color: red;/* Color de fondo verde */
+    background-color: red;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -30,6 +36,8 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
+  border-color: black;
 }
 
 table {
@@ -70,23 +78,20 @@ table {
     margin-left: 92%;
   }
 
-/* Flex container to align labels and inputs */
 .form-group {
 display: flex;
 align-items: center;
-margin-bottom: 10px; /* Space between form fields */
+margin-bottom: 10px;
 }
 
-/* Style for the labels */
 .form-label {
-width: 100px; /* Set a fixed width for labels */
-margin-right: 10px; /* Space between label and input */
-text-align: right; /* Align the text to the right */
+width: 100px;
+margin-right: 10px;
+text-align: right;
 }
 
-/* Style for the input fields */
 .form-group input {
-flex: 1; /* Input will take the remaining space */
+flex: 1; 
 }
 
 #submitButton{

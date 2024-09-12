@@ -1,25 +1,28 @@
-let student = [];
+let student = JSON.parse(localStorage.getItem('students')) || [];
 let currentPage = 1;
 const rowsPerPage = 5;
 let filteredStudents = student;
+
+const generateLegajo = () => {
+  return Math.floor(Math.random() * 90000) + 10000; 
+};
 
 const addStudents = (event) => {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
   const lastName = document.getElementById("lastName").value;
+  const legajo = generateLegajo();
 
-  student.push({ name, lastName });
-  console.log(student);
+  student.push({ name, lastName, legajo });
 
-  // Limpiar el campo del formulario
+  localStorage.setItem('students', JSON.stringify(student));
+
   document.getElementById("name").value = "";
   document.getElementById("lastName").value = "";
 
-  // Actualizamos la lista de estudiantes filtrados
   filteredStudents = student;
 
-  // Renderizamos la tabla con los nuevos datos
   renderTable();
 };
 
@@ -34,14 +37,14 @@ const renderTable = () => {
   paginatedStudents.forEach((student) => {
     let row = document.createElement("tr");
     row.innerHTML =
-      "<td>" + student.name + "</td><td>" + student.lastName + "</td>";
+      "<td>" + student.name + "</td><td>" + student.lastName + "</td><td>" + student.legajo + "</td>";
     tbody.appendChild(row);
   });
 
   const rowsToFill = rowsPerPage - paginatedStudents.length;
   for (let i = 0; i < rowsToFill; i++) {
     let emptyRow = document.createElement("tr");
-    emptyRow.innerHTML = "<td>&nbsp;</td><td>&nbsp;</td>";
+    emptyRow.innerHTML = "<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
     tbody.appendChild(emptyRow);
   }
 
@@ -49,18 +52,17 @@ const renderTable = () => {
 };
 
 const updatePagination = () => {
-  const totalPages = Math.ceil(student.length / rowsPerPage);
+  const totalPages = Math.ceil(filteredStudents.length / rowsPerPage);
 
-  // Actualizamos el selector de páginas
   const pageSelect = document.getElementById("pageSelect");
-  pageSelect.innerHTML = ""; // Limpiar el contenido previo del select
+  pageSelect.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
     let option = document.createElement("option");
     option.value = i;
     option.text = `Página ${i}`;
     if (i === currentPage) {
-      option.selected = true; // Selecciona la página actual
+      option.selected = true;
     }
     pageSelect.appendChild(option);
   }
@@ -76,21 +78,20 @@ const changePageSelect = () => {
   renderTable();
 };
 
-
 const searchTable = () => {
-  const searchInput = document
-    .getElementById("searchInput")
-    .value.toLowerCase();
+  const searchInput = document.getElementById("searchInput").value.toLowerCase();
 
   filteredStudents = student.filter((student) => {
     return (
       student.name.toLowerCase().includes(searchInput) ||
-      student.lastName.toLowerCase().includes(searchInput)
+      student.lastName.toLowerCase().includes(searchInput) ||
+      student.legajo.toString().includes(searchInput)
     );
   });
 
   renderTable();
 };
+
 
 window.onload = () => {
   renderTable();

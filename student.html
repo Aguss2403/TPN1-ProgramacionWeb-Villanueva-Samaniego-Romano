@@ -14,13 +14,13 @@
             <h2>Menú</h2>
             <nav>
                 <a id="menuNav" href="menu.html">Página Principal</a>
-                <a id="alumnoNav" href="student.html"class="active">Alumnos</a>
+                <a id="studentNav" href="student.html"class="active">Alumnos</a>
             </nav>
         </div>
 
         <div class="container">
-            <header id="headerAlumno">
-                <h1 id="encabezado">Alumnos</h1>
+            <header id="headerStudent">
+                <h1 id="header">Alumnos</h1>
                 <a href="student_form.html" class="buttonSt">Agregar</a>
             </header>
     
@@ -30,7 +30,7 @@
                         onkeyup="searchTable()">
                 </div>
     
-                <table id="datos">
+                <table id="tableForm">
                     <thead>
                         <tr>
                             <th>Legajo</th>
@@ -42,9 +42,7 @@
                 </table>
     
                 <div class="pagination">
-                    <span>Página número:</span> <!-- Texto adicional -->
                     <select id="pageSelect" onchange="changePageSelect()"></select>
-                    <!-- <span id="pageNumber"></span> -->
                   </div>
             </div>
 

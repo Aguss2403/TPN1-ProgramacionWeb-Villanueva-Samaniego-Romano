@@ -13,9 +13,9 @@ header{
 }
 
 .buttonSt {
-  background-color: green;
+  background-color: darkturquoise;
   color: white;
-  padding: 15px 32px;
+  padding: 7px ;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -23,13 +23,13 @@ header{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
-  border-color: black;
+  border: 2px solid black;
 }
 
 .buttonStAct{
-    background-color: red;
+  background-color: red;
   color: white;
-  padding: 15px 32px;
+  padding: 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -39,6 +39,7 @@ header{
   border-radius: 5px;
   border-color: black;
   width: 53px;
+  border: 2px solid black;
 }
 
 table {
@@ -83,6 +84,7 @@ table {
 display: flex;
 align-items: center;
 margin-bottom: 10px;
+width: 30%;
 }
 
 .form-label {
@@ -104,3 +106,12 @@ flex: 1;
     border-color: green;
     color: white;
 }
+
+.sendForm{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+/* hacer lo de la alta de alumnos con grid (nombre, imput nombre, etc) */

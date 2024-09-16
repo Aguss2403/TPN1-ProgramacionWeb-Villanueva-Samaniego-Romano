@@ -23,7 +23,9 @@ const addStudents = (event) => {
 
   filteredStudents = student;
 
+  window.location.href = "student.html";
   renderTable();
+
 };
 
 const renderTable = () => {

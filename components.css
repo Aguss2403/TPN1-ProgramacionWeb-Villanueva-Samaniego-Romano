@@ -15,7 +15,7 @@ header{
 .buttonSt {
   background-color: darkturquoise;
   color: white;
-  padding: 7px ;
+  padding: 7px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -50,35 +50,51 @@ table {
     padding-left: 100px;
     border-radius: 15px;
     background-color: white;
-  }
+}
   
-  th,td,tr {
+th,td,tr {
     padding: 8px;
     text-align: center;
     border: 1px solid #000000;
     border-radius: 400px;
-  }
-  form {
+}
+
+ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-right: 10cap;
     margin: auto;
-  }
+}
 
-  .content-layout{
+.content-layout{
     width: 96%;
     align-self: center;
-  }
-  #searchInput{
+}
+#searchInput{
     margin-left: 15px;
     margin-bottom: 5px;
     height: 25px;
     width: 99.5%;
-  }
-  .pagination{
-    margin-left: 92%;
-  }
+}
+.pagination{
+    margin-left: 75%;
+    margin-top: 5px;
+    display: flex;
+    width: 300px;
+}
+ 
+.pagination-button{
+  border: 1px solid #000000;
+  margin: 1px;
+  cursor:pointer;
+}
+
+.pagination-button.active {
+  background-color: rgb(37, 158, 37);
+  color: white;
+  border-color: rgb(27, 100, 27); 
+}
 
 .form-group {
 display: flex;
@@ -111,7 +127,3 @@ flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
-
-
-/* hacer lo de la alta de alumnos con grid (nombre, imput nombre, etc) */

@@ -33,17 +33,19 @@
                 <table id="tableForm">
                     <thead>
                         <tr>
-                            <th>Legajo</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
+                            <th>Legajo</th>
                         </tr>
                     </thead>
                     <tbody id="bodytable"></tbody>
                 </table>
     
                 <div class="pagination">
-                    <select id="pageSelect" onchange="changePageSelect()"></select>
-                  </div>
+                    <label id="itemPerPage">Item por página: </label>
+                    <select id="itemPerPageSelect" onchange="changeItemsPerPage()"></select>
+                    <div id="paginationButtons" class="pagination-buttons"></div>
+                </div>
             </div>
 
             

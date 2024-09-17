@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    flex: 1;
+    flex: 0.97;
     background-color: white;
 }
 
@@ -74,9 +74,4 @@ nav #studentNav.active {
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  #encabezado{
-    margin-left: 1%;
-  }
-
   
